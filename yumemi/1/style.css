@@ -1,0 +1,45 @@
+html {
+    user-select: none;
+    touch-action:none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: #574f7d;
+    color: #dff0ea;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#app {
+    width: 80%;
+    height: 80%;
+}
+
+a {
+    width: 60%;
+    padding: 50px;
+    text-align: center;
+    color: #dff0ea;
+    font-size: 5rem;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #4f3a65;
+    border-bottom: solid 1rem #95adbe;
+    border-radius: 30px;
+}
+
+a:active {
+    transform: translateY(1rem);
+    border-bottom: none;
+}
+
+a:focus {
+    outline: 0;
+}
