@@ -5,20 +5,20 @@
 </head>
 <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <input type="number" v-model="buffer" />
-        <button @click="apply()">apply</button>
-        <button @click="show">show</button>
-        <p v-if="isShow">{{ fib }}</p>
+        <a @click="apply">apply</a>
+        <a @click="show">show</a>
+        <p v-if="isShow">{{ heavy }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <script>
         const app = new Vue({
             el: '#app',
             data: {
-                isShow: false,
+                isShow: true,
                 buffer: 0,
-                num   : 10000000
+                num   : 0,
             },
             methods: {
                 apply: function () {
@@ -29,10 +29,10 @@
                 }
             },
             computed: {
-                fib: function() {
-                    let v = 1;
-                    for (let i = 0;i<this.num;i++) {
-                        v = v + i;
+                heavy: function() {
+                    let v = 0, w = this.num;
+                    while (w--) {
+                        v += w;
                     }
                     return v;
                 }
