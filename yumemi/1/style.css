@@ -9,7 +9,7 @@ body {
     margin: 0px;
     background-color: #574f7d;
     color: #dff0ea;
-    font-size: 5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,55 @@ body {
     height: 80%;
 }
 
-a {
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background: #4f3a65;
+}
+
+.nav-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #dff0ea;
+    letter-spacing: 3px;
+    padding: 5px 15px 5px 15px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;    
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #dff0ea;
+    padding: 2px;
+    margin: 3px;
+}
+
+.nav-link::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #dff0ea;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+}
+
+.nav-link:hover::after {
+    bottom: -2px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn {
     padding: 10px;
     text-align: center;
     color: #dff0ea;
@@ -34,12 +82,12 @@ a {
     border-radius: 10px;
 }
 
-a:active {
+.btn:active {
     transform: translateY(0.2rem);
     border-bottom: none;
 }
 
-a:focus {
+.btn:focus {
     outline: 0;
 }
 
